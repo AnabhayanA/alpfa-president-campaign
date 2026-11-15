@@ -1,0 +1,93 @@
+/* A flexible sheet turns over the stationary spread, hinged at the binding. */
+.book-turn-host,
+.book-live {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.page-turn-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+}
+.turn-book {
+  position: absolute;
+  perspective: 1800px;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.turn-stationary {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--paper);
+}
+.turn-leaf {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 3;
+  transform-style: preserve-3d;
+}
+.turn-strip {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transform-origin: 0% 50%;
+  transform-style: preserve-3d;
+}
+.turn-face {
+  position: absolute;
+  inset: 0;
+  width: calc(100% + 0.5px);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--paper);
+  transform: translateZ(0.1px);
+}
+.turn-face-back {
+  transform: rotateY(180deg) translateZ(0.1px);
+}
+.turn-face-tint {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: #000;
+  pointer-events: none;
+}
+.turn-ground-shadow {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transform-origin: center;
+  background: linear-gradient(
+    90deg,
+    transparent 10%,
+    #0008 48%,
+    #0004 54%,
+    transparent 90%
+  );
+  pointer-events: none;
+}
+.page-copy {
+  position: absolute;
+  font: inherit;
+  box-shadow: none;
+  scrollbar-width: none;
+  pointer-events: none;
+}
+.page-copy::-webkit-scrollbar {
+  display: none;
+}
+.page-copy .spread-furniture {
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-turn-layer {
+    display: none;
+  }
+}

@@ -1,0 +1,2039 @@
+.gallery-context {
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.photo-album {
+  grid-column: 1 / -1;
+  min-width: 0;
+  align-self: end;
+  border-top: 1px solid var(--line);
+  margin-top: 25px;
+}
+.photo-album summary {
+  cursor: pointer;
+  min-height: 54px;
+  padding: 15px 0;
+  font-size: 13px;
+}
+.photo-album summary > span {
+  float: right;
+  font-size: 10px;
+  color: var(--accent);
+  margin-left: 10px;
+}
+.photo-album > p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin: 8px 0 22px;
+}
+.photo-album > .gallery {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.photo-album .media {
+  aspect-ratio: 1.5;
+}
+.meme-moment .media:has(img) {
+  aspect-ratio: 1.3;
+}
+/* Persistent presentation shell */
+.app {
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  position: relative;
+  isolation: isolate;
+}
+.site-header {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px max(3.5vw, 20px);
+  padding-top: max(12px, env(safe-area-inset-top));
+  border-bottom: 1px solid var(--line);
+  z-index: 20;
+  background: var(--navy);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+.brand b {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  border-left: 1px solid #ffffff55;
+  padding-left: 8px;
+  margin-left: 6px;
+}
+.brand small {
+  font-size: 7px;
+  letter-spacing: 1.3px;
+  display: block;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.brand-symbol {
+  font: italic 43px/1 var(--font-editorial);
+  position: relative;
+  width: 33px;
+  color: var(--accent);
+}
+.brand-symbol > span {
+  font: 23px/1 var(--font-sans);
+  position: absolute;
+  right: -2px;
+  top: 0;
+  color: var(--blue);
+}
+.header-act {
+  font-size: 8px;
+  color: var(--text-muted);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.header-act > span {
+  padding: 0 10px;
+  color: var(--accent);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fullscreen-button {
+  border: 0;
+}
+.chapters-button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.chapters-button:hover {
+  color: var(--accent);
+}
+.scene-stage {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+.scene-scroll {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey) transparent;
+}
+.scene-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 90px;
+  padding: 13px max(3.5vw, 20px);
+  padding-bottom: max(13px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--navy);
+  z-index: 20;
+}
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 35%;
+}
+.scene-number {
+  font-size: 21px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.scene-number > span {
+  color: var(--grey);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 8px;
+}
+.scene-name {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.footer-center {
+  max-width: 220px;
+  flex: 1;
+}
+.scene-progress {
+  height: 2px;
+  background: #ffffff20;
+  overflow: hidden;
+}
+.scene-progress > span {
+  height: 100%;
+  display: block;
+  background: var(--accent);
+  transition: width 0.5s;
+}
+.navigation-tip {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 1.4px;
+  color: var(--grey);
+  margin-top: 8px;
+}
+.scene-navigation {
+  display: flex;
+  gap: 13px;
+}
+.scene-navigation button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 46px;
+  min-width: 82px;
+  font-size: 12px;
+}
+.next-button {
+  background: var(--accent);
+  color: var(--navy);
+  padding: 0 21px;
+}
+.previous-button {
+  color: var(--text-muted);
+}
+.next-button:hover:not(:disabled) {
+  background: #ffc6e2;
+}
+/* Act I: a poster, not a landing page */
+.poster-scene {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 7%;
+  row-gap: 22px;
+  max-width: 1600px;
+  padding: 28px max(5vw, 28px) 35px;
+  margin: auto;
+  position: relative;
+}
+.poster-edition {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+.poster-edition > span {
+  color: var(--grey);
+}
+.poster-title {
+  align-self: center;
+  position: relative;
+  padding: 15px 0;
+}
+.poster-title h1 {
+  font-size: clamp(70px, 8.8vw, 148px);
+  font-weight: 850;
+  letter-spacing: -0.075em;
+  line-height: 0.84;
+}
+.poster-title h1 > span:first-child {
+  color: var(--accent);
+  white-space: nowrap;
+}
+.poster-dot {
+  color: var(--blue);
+}
+.poster-byline {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 30px;
+}
+.poster-byline p {
+  font-size: clamp(18px, 2vw, 31px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 2px;
+}
+.poster-byline strong {
+  font-weight: 750;
+}
+.small-cross {
+  font-size: 50px;
+  line-height: 1;
+  color: var(--accent);
+}
+.campaign-portrait {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  align-self: center;
+  position: relative;
+  background: var(--accent);
+  color: var(--navy);
+  padding: 17px 19px 19px;
+  max-width: 490px;
+  width: 100%;
+  justify-self: end;
+  transform: rotate(2deg);
+}
+.portrait-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  padding-bottom: 11px;
+}
+.portrait-placeholder {
+  aspect-ratio: 1.28;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #dedee4;
+  overflow: hidden;
+}
+.portrait-placeholder:before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  border: 1px solid #0b0b0f25;
+  transform: rotate(25deg);
+}
+.portrait-initials {
+  font: italic clamp(90px, 13vw, 210px)/1 var(--font-editorial);
+  letter-spacing: -15px;
+  color: #74747f;
+  position: relative;
+}
+.portrait-placeholder-tag {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+.portrait-coordinate {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  writing-mode: vertical-rl;
+  font: 8px monospace;
+  letter-spacing: 1.5px;
+}
+.campaign-portrait > .media {
+  aspect-ratio: 1.28;
+}
+.campaign-portrait figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  padding: 18px 0 0;
+  font-size: clamp(21px, 2.7vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+.campaign-portrait figcaption em {
+  font-family: var(--font-editorial);
+}
+.portrait-stamp {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  background: var(--navy);
+  color: var(--accent);
+  padding: 12px;
+  transform: rotate(-7deg);
+}
+.poster-ask {
+  align-self: start;
+  min-width: 0;
+}
+.poster-ask > .eyebrow {
+  font-size: 10px;
+}
+.vote-options {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+.vote-options > .red-button {
+  min-width: 170px;
+}
+.no-lane {
+  padding: 0 26px 0 12px;
+  min-width: 130px;
+}
+.no-button {
+  border-color: #ffffff44;
+  gap: 14px;
+  padding: 14px 17px;
+  position: relative;
+  white-space: nowrap;
+}
+.vote-status {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin: 11px 0 0;
+  min-height: 16px;
+}
+.respectful-skip {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.poster-caption {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  position: relative;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.blue-rule {
+  width: 28px;
+  height: 2px;
+  background: var(--blue);
+}
+.poster-caption p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+.poster-signature {
+  margin-left: auto;
+  font: italic 16px/1.25 var(--font-editorial);
+  color: var(--accent);
+}
+/* The black-screen invitation */
+.why-scene {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 45px 25px;
+  background: var(--navy);
+  gap: 30px;
+}
+.why-scene > .eyebrow {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+.why-scene h2 {
+  font-size: clamp(48px, 8.5vw, 140px);
+  font-weight: 750;
+  line-height: 0.93;
+  letter-spacing: -0.06em;
+}
+.why-scene h2 em {
+  font-family: var(--font-editorial);
+  color: var(--accent);
+  font-weight: 400;
+}
+.why-scene > .text-button {
+  color: var(--accent);
+}
+.why-footnote {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--grey);
+}
+/* Act II: documentary spreads; each semester has its own composition */
+.timeline-scene {
+  min-height: 100%;
+  padding: 28px max(5vw, 28px) 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 7%;
+  row-gap: 28px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+.timeline-heading {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px 30px;
+}
+.timeline-heading > .eyebrow {
+  color: var(--text-muted);
+  font-size: 8px;
+}
+.semester {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  font-size: clamp(27px, 3.5vw, 54px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+.semester > span:first-child {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+}
+.semester strong {
+  font-weight: 700;
+  color: var(--accent);
+}
+.chapter-fraction {
+  font: 12px/1.2 monospace;
+  letter-spacing: 0;
+  margin-left: 25px;
+}
+.chapter-fraction > span {
+  color: var(--grey);
+  font-size: 10px;
+  margin-left: 6px;
+}
+.timeline-track {
+  height: 2px;
+  background: #ffffff1f;
+  grid-column: 1/-1;
+}
+.timeline-track > span {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+}
+.documentary-copy {
+  align-self: center;
+  padding: 8px 0;
+}
+.chapter-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.documentary-copy h2 {
+  font-size: clamp(32px, 3.9vw, 66px);
+  letter-spacing: -0.055em;
+  font-weight: 650;
+  line-height: 1.03;
+  margin: 17px 0 22px;
+}
+.documentary-copy h2 > span {
+  display: block;
+}
+.documentary-copy h2 > span:last-child {
+  color: var(--accent);
+}
+.chapter-body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #c0c0c9;
+  max-width: 550px;
+}
+.chapter-points {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+  display: grid;
+  gap: 12px;
+}
+.chapter-points > li {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  display: flex;
+  gap: 13px;
+}
+.chapter-points > li > span {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.chapter-takeaway {
+  font: italic 18px/1.4 var(--font-editorial);
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+  color: var(--accent);
+}
+.documentary-media {
+  align-self: center;
+  min-width: 0;
+}
+.gallery figure {
+  margin: 0;
+}
+.media {
+  position: relative;
+  aspect-ratio: 1.36;
+  background: #25252e;
+  overflow: hidden;
+}
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #25252e;
+}
+.media-soccer .media-art {
+  background: #273b36;
+}
+.media-events .media-art {
+  background: #39303a;
+}
+.media-committee .media-art {
+  background: #292f42;
+}
+.media-app .media-art {
+  background: #252e40;
+}
+.media-networking .media-art {
+  background: #34343d;
+}
+.art-orbit {
+  position: absolute;
+  width: 68%;
+  aspect-ratio: 1;
+  border: 1px solid #ffffff18;
+  border-radius: 50%;
+  transform: rotate(-30deg) scaleX(1.5);
+}
+.orbit-two {
+  width: 51%;
+  transform: rotate(40deg) scaleX(1.5);
+}
+.art-icon {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  color: #d6d6e6a6;
+  position: relative;
+  border: 1px solid #ffffff20;
+  border-radius: 50%;
+}
+.media-placeholder-label {
+  position: absolute;
+  bottom: 19px;
+  left: 15px;
+  right: 15px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #dddde7;
+}
+.media-loading {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.play-gif {
+  position: absolute;
+  inset: auto 20px 45px;
+  padding: 10px;
+  background: var(--accent);
+  color: var(--navy);
+  font-size: 12px;
+}
+.gallery figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 13px 0;
+  color: #c7c7d2;
+}
+.gallery figcaption > .mono {
+  font-size: 10px;
+  white-space: nowrap;
+  color: var(--grey);
+}
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 9px;
+  gap: 15px;
+}
+.gallery-controls > .eyebrow {
+  font-size: 8px;
+  color: var(--grey);
+}
+.gallery-controls > div {
+  display: flex;
+  gap: 8px;
+}
+.gallery-controls .icon-button {
+  border: 0;
+}
+.timeline-winter-2026 {
+  grid-template-columns: 1.15fr 1fr;
+  background: var(--surface);
+  max-width: none;
+}
+.timeline-winter-2026 .documentary-copy h2 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(36px, 4.7vw, 77px);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+}
+.timeline-winter-2026 .documentary-media {
+  transform: rotate(-2deg);
+}
+.timeline-spring-2026-ideas .documentary-copy {
+  grid-column: 2;
+  grid-row: 2;
+}
+.timeline-spring-2026-ideas .documentary-media {
+  grid-column: 1;
+  grid-row: 2;
+}
+.timeline-spring-2026-ideas .documentary-copy h2 > span:last-child {
+  color: var(--blue);
+}
+.idea-note {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  width: 100%;
+  min-height: 72px;
+}
+.idea-note > .eyebrow {
+  font-size: 8px;
+  color: var(--blue);
+}
+.idea-note > span:last-child {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.team-annotation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid var(--line);
+  padding: 15px;
+  margin-top: 17px;
+  color: var(--accent);
+}
+.team-annotation p {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.team-annotation strong {
+  font-size: 19px;
+  font-weight: 500;
+}
+.team-annotation p > span {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.team-annotation > .eyebrow {
+  font-size: 8px;
+  margin-left: auto;
+  color: var(--grey);
+}
+/* Small, intentional comic pauses */
+.meme-moment {
+  margin-top: 20px;
+  border-top: 1px dashed #ffffff30;
+}
+.moment-toggle {
+  min-height: 48px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+.moment-toggle > span:last-child {
+  margin-left: auto;
+  font-size: 17px;
+  color: var(--accent);
+}
+.meme-moment figure {
+  max-width: 400px;
+  padding-bottom: 12px;
+}
+.meme-moment .media {
+  aspect-ratio: 2;
+}
+.meme-moment figcaption {
+  font: italic 15px/1.5 var(--font-editorial);
+  color: var(--accent);
+  padding: 12px 0 0;
+}
+/* Act III: a manifesto in ink */
+.manifesto-scene {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 8%;
+  padding: 40px max(5vw, 28px);
+  background: var(--light);
+  color: var(--navy);
+}
+.manifesto-intro {
+  align-self: center;
+}
+.manifesto-intro > .eyebrow {
+  font-size: 8px;
+  color: var(--ink-muted);
+}
+.manifesto-intro h2 {
+  font-size: clamp(42px, 4.4vw, 76px);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  margin-top: 30px;
+  font-weight: 750;
+}
+.manifesto-intro h2 em {
+  display: block;
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  margin-top: 12px;
+  letter-spacing: -0.04em;
+}
+.manifesto-intro > p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 24px;
+  color: var(--ink-muted);
+}
+.manifesto-signature {
+  display: block;
+  font: italic 18px/1.4 var(--font-editorial);
+  margin-top: 22px;
+}
+.vision-status {
+  font-size: 7px;
+  letter-spacing: 1.1px;
+  margin-top: 27px;
+  color: var(--ink-muted);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.vision-status > span {
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  background: var(--blue);
+  border-radius: 50%;
+}
+.manifesto-list {
+  align-self: center;
+  border-top: 1px solid #0b0b0f;
+}
+.manifesto-item {
+  border-bottom: 1px solid #0b0b0f35;
+}
+.manifesto-item h3 {
+  font-size: clamp(17px, 1.65vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.manifesto-item h3 > button {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+  text-align: left;
+  padding: 20px 0;
+  min-height: 65px;
+}
+.manifesto-number {
+  font: 10px/1 monospace;
+  letter-spacing: 1px;
+  color: var(--ink-muted);
+  align-self: center;
+}
+.manifesto-toggle {
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+.manifesto-item.expanded h3 > button {
+  color: var(--navy);
+}
+.manifesto-item.expanded .manifesto-number {
+  background: var(--accent);
+  padding: 7px;
+  margin: -7px;
+}
+.manifesto-item p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ink-muted);
+  padding: 0 18px 21px 37px;
+  max-width: 580px;
+}
+/* Act IV: a fake ending with an encore */
+.finale-scene {
+  padding: 40px max(5vw, 28px);
+  min-height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6%;
+  align-items: center;
+  overflow: hidden;
+}
+.finale-prelude > .eyebrow {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+.finale-prelude h2 {
+  font-size: clamp(35px, 4.2vw, 70px);
+  letter-spacing: -0.05em;
+  margin-top: 35px;
+  line-height: 1.02;
+  font-weight: 550;
+}
+.finale-prelude em {
+  color: var(--accent);
+  font-family: var(--font-editorial);
+  font-weight: 400;
+}
+.finale-prelude > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin: 20px 0;
+  max-width: 360px;
+}
+.finale-prelude > .button {
+  font-size: 11px;
+  min-width: 190px;
+}
+.closing-poster {
+  background: var(--accent);
+  color: var(--navy);
+  padding: 28px;
+  position: relative;
+}
+.closing-poster > .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1px;
+  display: block;
+  max-width: 300px;
+}
+.closing-vote {
+  font-size: clamp(60px, 6.9vw, 115px);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  padding: 45px 0;
+  position: relative;
+}
+.closing-vote > span:first-child {
+  white-space: nowrap;
+}
+.closing-star {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  font-size: 70px;
+  color: var(--navy);
+}
+.closing-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.closing-bottom > p {
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.closing-bottom em {
+  font-family: var(--font-editorial);
+}
+.closing-bottom > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.closing-bottom .button {
+  font-size: 10px;
+  padding: 12px;
+  gap: 12px;
+}
+.closing-bottom .text-button {
+  font-size: 10px;
+}
+.closing-poster > small {
+  display: block;
+  border-top: 1px solid #0b0b0f33;
+  margin-top: 24px;
+  padding-top: 15px;
+  font-size: 9px;
+  color: #40404b;
+}
+.encore-open {
+  align-items: start;
+  grid-template-columns: 1fr 1fr;
+}
+.encore-open .closing-poster {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+.finale-moments {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+.finale-moments .meme-moment:first-child {
+  margin-top: 0;
+}
+.no-callback {
+  font: italic 16px/1.4 var(--font-editorial);
+  color: var(--accent);
+  margin-top: 20px;
+}
+.finale-moments > .text-button {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.confetti > span {
+  position: absolute;
+  left: var(--x);
+  top: -20px;
+  width: 7px;
+  height: 12px;
+  background: var(--color);
+  animation: confetti-fall 2.8s var(--delay) ease-out both;
+}
+@keyframes confetti-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(-20px) rotate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(850px) rotate(var(--r));
+  }
+}
+/* Persistent soundtrack, isolated from the scene mount lifecycle */
+.music-controller {
+  position: absolute;
+  right: max(3.5vw, 20px);
+  bottom: 105px;
+  z-index: 35;
+}
+.music-launcher {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #ffffff30;
+  background: var(--navy);
+  color: var(--text-muted);
+}
+.music-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--grey);
+  border-radius: 50%;
+}
+.music-enabled .music-dot {
+  background: var(--accent);
+}
+.music-panel {
+  position: absolute;
+  bottom: 47px;
+  right: 0;
+  width: 340px;
+  max-width: calc(100vw - 36px);
+  max-height: calc(100dvh - 210px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid #ffffff35;
+  box-shadow: 0 20px 60px #0008;
+}
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.panel-heading > .eyebrow {
+  font-size: 8px;
+  color: var(--accent);
+}
+.panel-heading .icon-button {
+  border: 0;
+}
+.music-panel h2 {
+  font: italic 29px/1.05 var(--font-editorial);
+  letter-spacing: -0.8px;
+  margin: 12px 0 22px;
+}
+.music-note {
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 12px 0;
+}
+.music-modes {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.music-modes button {
+  font-size: 11px;
+  padding: 7px 0;
+  min-height: 35px;
+}
+.music-modes button[aria-pressed="true"] {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+.local-player-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.local-player .button,
+.spotify-player > .button {
+  font-size: 11px;
+  gap: 15px;
+  padding: 12px 16px;
+  min-height: 44px;
+}
+.volume-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  margin-top: 20px;
+}
+.volume-label > span {
+  color: var(--text-muted);
+}
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  min-height: 35px;
+}
+.spotify-frame {
+  padding-top: 5px;
+}
+.spotify-frame iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  display: block;
+}
+.spotify-frame .text-button {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.music-error {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--accent);
+  margin-top: 13px;
+}
+.fullscreen-message {
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+  width: 440px;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 13px 16px;
+  z-index: 50;
+  font-size: 11px;
+}
+/* Native chapter dialog supplies focus trapping, background inertness, and Escape */
+.chapter-dialog {
+  margin: auto 0 auto auto;
+  max-height: 100dvh;
+  height: 100dvh;
+  max-width: min(520px, 100vw);
+  width: 520px;
+  background: var(--surface);
+  color: var(--white);
+  border: 0;
+  border-left: 1px solid var(--line);
+  padding: 0;
+  overscroll-behavior: contain;
+}
+.chapter-dialog::backdrop {
+  background: #000a;
+}
+.chapter-dialog-inner {
+  padding: 26px 35px;
+}
+.dialog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.dialog-heading > .eyebrow {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+.dialog-heading .icon-button {
+  border: 0;
+}
+.chapter-dialog h2 {
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: -3px;
+  margin: 20px 0 32px;
+}
+.chapter-dialog h2 em {
+  font-family: var(--font-editorial);
+  color: var(--accent);
+}
+.chapter-dialog nav {
+  border-top: 1px solid var(--line);
+}
+.chapter-dialog nav > a {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 17px 0;
+  min-height: 55px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.chapter-dialog nav > a > .mono {
+  font-size: 9px;
+  color: var(--grey);
+}
+.chapter-dialog nav > a > svg {
+  margin-left: auto;
+}
+.chapter-dialog nav > a[aria-current],
+.chapter-dialog nav > a:hover {
+  color: var(--accent);
+}
+.chapter-dialog-inner > p {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 23px;
+}
+@media (min-width: 1550px) {
+  .poster-scene {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+  .campaign-portrait {
+    max-width: 570px;
+  }
+  .portrait-placeholder,
+  .campaign-portrait > .media {
+    aspect-ratio: 1.1;
+  }
+  .timeline-scene {
+    column-gap: 9%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .chapter-body {
+    font-size: 15px;
+  }
+  .chapter-points > li {
+    font-size: 14px;
+  }
+  .chapter-points {
+    gap: 17px;
+    margin: 30px 0;
+  }
+  .chapter-takeaway {
+    font-size: 21px;
+  }
+  .manifesto-scene {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .manifesto-item h3 > button {
+    padding: 25px 0;
+  }
+  .manifesto-item p {
+    font-size: 14px;
+  }
+  .finale-scene {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+  }
+  .closing-poster {
+    padding: 40px;
+  }
+}
+@media (max-width: 1050px) {
+  .header-act {
+    display: none;
+  }
+  .poster-scene {
+    column-gap: 5%;
+    padding: 27px 30px;
+  }
+  .poster-title h1 {
+    font-size: 8.8vw;
+  }
+  .poster-byline p {
+    font-size: 21px;
+  }
+  .small-cross {
+    font-size: 42px;
+  }
+  .campaign-portrait {
+    padding: 13px;
+  }
+  .portrait-placeholder,
+  .campaign-portrait > .media {
+    aspect-ratio: 1;
+  }
+  .campaign-portrait figcaption {
+    font-size: 28px;
+    padding-top: 15px;
+  }
+  .portrait-stamp {
+    font-size: 10px;
+    padding: 9px;
+  }
+  .poster-caption {
+    margin-top: 20px;
+  }
+  .timeline-scene {
+    padding: 25px 30px 40px;
+    column-gap: 5%;
+  }
+  .documentary-copy h2 {
+    font-size: 38px;
+  }
+  .chapter-body {
+    font-size: 12px;
+  }
+  .chapter-points > li {
+    font-size: 11px;
+  }
+  .gallery figcaption {
+    font-size: 10px;
+  }
+  .semester {
+    font-size: 40px;
+  }
+  .manifesto-scene {
+    padding: 35px 30px;
+    gap: 7%;
+  }
+  .manifesto-intro h2 {
+    font-size: 44px;
+  }
+  .manifesto-item h3 {
+    font-size: 19px;
+  }
+  .manifesto-item h3 > button {
+    padding: 17px 0;
+    gap: 13px;
+  }
+  .finale-scene {
+    padding: 35px 30px;
+    gap: 5%;
+  }
+  .finale-prelude h2 {
+    font-size: 42px;
+  }
+  .closing-vote {
+    font-size: 7vw;
+  }
+  .closing-poster {
+    padding: 20px;
+  }
+  .closing-bottom {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .closing-bottom > div {
+    width: 100%;
+  }
+  .closing-bottom > .button {
+    width: 100%;
+  }
+  .footer-status {
+    gap: 12px;
+  }
+  .scene-name {
+    font-size: 9px;
+  }
+  .footer-center {
+    max-width: 160px;
+  }
+}
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 64px;
+    padding: 8px 20px;
+    padding-top: max(8px, env(safe-area-inset-top));
+    gap: 12px;
+  }
+  .brand {
+    font-size: 15px;
+    gap: 9px;
+  }
+  .brand-symbol {
+    font-size: 34px;
+    width: 28px;
+  }
+  .brand-symbol > span {
+    font-size: 21px;
+  }
+  .brand b {
+    font-size: 9px;
+  }
+  .brand small {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .header-actions {
+    gap: 5px;
+  }
+  .chapters-button {
+    font-size: 11px;
+    gap: 6px;
+  }
+  .fullscreen-button {
+    min-width: 35px;
+  }
+  .scene-footer {
+    min-height: 76px;
+    padding: 10px 18px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    gap: 14px;
+    position: relative;
+  }
+  .footer-status {
+    max-width: none;
+    gap: 0;
+    flex: 1;
+    align-items: start;
+    flex-direction: column;
+  }
+  .scene-number {
+    font-size: 18px;
+  }
+  .scene-number > span {
+    font-size: 9px;
+    margin-left: 7px;
+  }
+  .scene-name {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 8px;
+    margin-top: 1px;
+  }
+  .footer-center {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    max-width: none;
+    pointer-events: none;
+  }
+  .scene-progress {
+    height: 2px;
+  }
+  .navigation-tip {
+    display: none;
+  }
+  .scene-navigation {
+    gap: 6px;
+  }
+  .scene-navigation button {
+    min-width: 44px;
+    min-height: 44px;
+    gap: 8px;
+  }
+  .previous-button > span {
+    display: none;
+  }
+  .next-button {
+    padding: 0 17px;
+  }
+  .scene-navigation .next-button {
+    font-size: 11px;
+  }
+  .poster-scene {
+    padding: 22px 23px 70px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 26px;
+    min-height: 100%;
+  }
+  .poster-edition {
+    font-size: 7px;
+    letter-spacing: 1.1px;
+    gap: 20px;
+  }
+  .poster-edition > span {
+    display: none;
+  }
+  .poster-title {
+    padding: 0;
+    grid-column: 1;
+  }
+  .poster-title h1 {
+    font-size: clamp(76px, 18.5vw, 130px);
+    letter-spacing: -0.075em;
+    line-height: 0.85;
+  }
+  .poster-byline {
+    margin-top: 22px;
+    gap: 18px;
+  }
+  .poster-byline p {
+    font-size: 20px;
+    letter-spacing: 1.8px;
+  }
+  .small-cross {
+    font-size: 40px;
+  }
+  .campaign-portrait {
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
+    transform: rotate(1.2deg);
+    padding: 13px;
+    margin: 0 0 5px;
+  }
+  .portrait-placeholder,
+  .campaign-portrait > .media {
+    aspect-ratio: 1.75;
+  }
+  .portrait-initials {
+    font-size: 105px;
+    letter-spacing: -10px;
+  }
+  .portrait-coordinate {
+    font-size: 7px;
+  }
+  .portrait-placeholder-tag {
+    font-size: 7px;
+    bottom: 13px;
+    left: 13px;
+  }
+  .portrait-topline {
+    font-size: 7px;
+    padding-bottom: 9px;
+  }
+  .campaign-portrait figcaption {
+    font-size: 25px;
+    padding-top: 13px;
+  }
+  .portrait-stamp {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .poster-ask {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .vote-options {
+    gap: 7px;
+  }
+  .vote-options > .red-button {
+    min-width: 155px;
+    padding: 13px 17px;
+    gap: 18px;
+    font-size: 11px;
+  }
+  .no-lane {
+    min-width: 110px;
+    padding: 0 23px 0 4px;
+  }
+  .no-button {
+    font-size: 11px;
+    padding: 13px 15px;
+    gap: 11px;
+  }
+  .vote-status {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+  .respectful-skip {
+    font-size: 10px;
+  }
+  .poster-caption {
+    grid-column: 1;
+    margin-top: 0;
+    gap: 12px;
+    padding-top: 19px;
+    align-items: start;
+  }
+  .poster-caption p {
+    font-size: 10px;
+  }
+  .poster-signature {
+    font-size: 13px;
+  }
+  .blue-rule {
+    width: 17px;
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  .why-scene {
+    padding: 35px 23px 75px;
+    gap: 28px;
+  }
+  .why-scene h2 {
+    font-size: 19vw;
+  }
+  .why-scene > .eyebrow {
+    font-size: 7px;
+  }
+  .why-footnote {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+  .timeline-scene,
+  .timeline-winter-2026 {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    min-height: 100%;
+    padding: 23px 23px 75px;
+  }
+  .timeline-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+  }
+  .timeline-heading > .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.1px;
+  }
+  .semester {
+    font-size: 34px;
+    gap: 9px;
+    letter-spacing: -1px;
+  }
+  .chapter-fraction {
+    font-size: 10px;
+    margin-left: 7px;
+  }
+  .chapter-fraction > span {
+    font-size: 8px;
+    margin-left: 4px;
+  }
+  .timeline-track {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .documentary-copy {
+    padding: 0;
+    align-self: auto;
+    width: 100%;
+  }
+  .documentary-copy h2 {
+    font-size: clamp(34px, 9.1vw, 51px);
+    margin: 15px 0 20px;
+  }
+  .timeline-winter-2026 .documentary-copy h2 {
+    font-size: clamp(38px, 10vw, 60px);
+  }
+  .chapter-body {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .chapter-points {
+    gap: 13px;
+    margin: 20px 0;
+  }
+  .chapter-points > li {
+    font-size: 11px;
+    line-height: 1.7;
+    gap: 11px;
+  }
+  .chapter-takeaway {
+    font-size: 17px;
+  }
+  .documentary-media {
+    width: 100%;
+    align-self: auto;
+  }
+  .timeline-winter-2026 .documentary-media {
+    transform: none;
+  }
+  .media {
+    aspect-ratio: 1.35;
+  }
+  .gallery figcaption {
+    font-size: 10px;
+  }
+  .gallery-controls > .eyebrow {
+    font-size: 7px;
+  }
+  .media-placeholder-label {
+    font-size: 8px;
+    letter-spacing: 1.3px;
+  }
+  .meme-moment {
+    margin-top: 16px;
+  }
+  .moment-toggle {
+    font-size: 10px;
+    gap: 8px;
+  }
+  .meme-moment .media {
+    aspect-ratio: 1.8;
+  }
+  .team-annotation {
+    padding: 13px;
+  }
+  .team-annotation strong {
+    font-size: 18px;
+  }
+  .team-annotation > .eyebrow {
+    font-size: 7px;
+  }
+  .manifesto-scene {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 28px 23px 75px;
+  }
+  .manifesto-intro > .eyebrow {
+    font-size: 7px;
+  }
+  .manifesto-intro h2 {
+    font-size: clamp(41px, 10vw, 66px);
+    margin-top: 23px;
+  }
+  .manifesto-intro h2 em {
+    margin-top: 9px;
+  }
+  .manifesto-intro > p {
+    font-size: 11px;
+  }
+  .manifesto-signature {
+    font-size: 17px;
+    margin-top: 18px;
+  }
+  .vision-status {
+    font-size: 6px;
+    letter-spacing: 0.7px;
+    margin-top: 20px;
+  }
+  .manifesto-item h3 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .manifesto-item h3 > button {
+    min-height: 66px;
+    gap: 17px;
+    padding: 18px 0;
+  }
+  .manifesto-item p {
+    font-size: 12px;
+    padding-left: 33px;
+    padding-right: 7px;
+  }
+  .manifesto-number {
+    font-size: 9px;
+  }
+  .manifesto-toggle {
+    font-size: 22px;
+  }
+  .finale-scene,
+  .encore-open {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding: 30px 23px 75px;
+    align-items: stretch;
+  }
+  .finale-prelude > .eyebrow {
+    font-size: 7px;
+  }
+  .finale-prelude h2 {
+    font-size: clamp(37px, 10vw, 60px);
+    margin-top: 29px;
+  }
+  .finale-prelude > p {
+    font-size: 12px;
+  }
+  .closing-poster {
+    padding: 23px;
+    min-width: 0;
+  }
+  .closing-poster > .eyebrow {
+    font-size: 7px;
+  }
+  .closing-vote {
+    font-size: clamp(57px, 14.6vw, 100px);
+    padding: 48px 0 30px;
+  }
+  .closing-star {
+    font-size: 55px;
+    top: 11px;
+  }
+  .closing-bottom {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .closing-bottom > p {
+    font-size: 19px;
+  }
+  .closing-bottom > div {
+    width: auto;
+  }
+  .closing-poster > small {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .finale-moments {
+    order: 0;
+  }
+  .music-controller {
+    right: 18px;
+    bottom: 88px;
+  }
+  .music-launcher {
+    min-height: 32px;
+    gap: 7px;
+    padding: 6px 9px;
+    font-size: 9px;
+  }
+  .music-launcher > svg {
+    width: 13px;
+  }
+  .music-panel {
+    bottom: 42px;
+    width: 325px;
+    max-height: calc(100dvh - 200px);
+    padding: 18px;
+  }
+  .music-panel h2 {
+    font-size: 26px;
+    margin-top: 5px;
+  }
+  .chapter-dialog-inner {
+    padding: 22px 25px;
+  }
+  .chapter-dialog h2 {
+    font-size: 49px;
+    margin: 15px 0 26px;
+  }
+  .chapter-dialog nav > a {
+    font-size: 11px;
+    min-height: 55px;
+    padding: 16px 0;
+  }
+  .chapter-dialog nav > a > .mono {
+    font-size: 8px;
+  }
+  .fullscreen-message {
+    top: 70px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .site-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .brand {
+    font-size: 13px;
+    gap: 7px;
+  }
+  .brand small {
+    font-size: 5px;
+  }
+  .brand b {
+    font-size: 8px;
+    padding-left: 6px;
+    margin-left: 4px;
+  }
+  .brand-symbol {
+    font-size: 31px;
+    width: 25px;
+  }
+  .brand-symbol > span {
+    font-size: 18px;
+  }
+  .chapters-button > span {
+    display: none;
+  }
+  .poster-scene,
+  .timeline-scene,
+  .manifesto-scene,
+  .finale-scene {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .poster-title h1 {
+    font-size: 18vw;
+  }
+  .vote-options > .red-button {
+    min-width: 145px;
+  }
+  .vote-options {
+    gap: 0;
+  }
+  .no-lane {
+    padding-right: 22px;
+    min-width: 110px;
+  }
+  .poster-byline p {
+    font-size: 18px;
+  }
+  .poster-signature {
+    font-size: 11px;
+  }
+  .chapter-fraction {
+    display: none;
+  }
+  .semester {
+    font-size: 31px;
+  }
+  .documentary-copy h2 {
+    font-size: 33px;
+  }
+  .scene-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .scene-name {
+    max-width: 130px;
+  }
+  .closing-vote {
+    font-size: 14vw;
+  }
+  .closing-bottom {
+    gap: 20px;
+  }
+  .closing-poster {
+    padding: 20px;
+  }
+}
+@media (max-height: 600px) and (min-width: 761px) {
+  .site-header {
+    min-height: 60px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .scene-footer {
+    min-height: 72px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .music-controller {
+    bottom: 85px;
+  }
+  .music-panel {
+    max-height: calc(100dvh - 170px);
+  }
+  .poster-scene {
+    padding-top: 22px;
+  }
+  .poster-title h1 {
+    font-size: 7vw;
+  }
+  .poster-byline {
+    margin-top: 18px;
+  }
+  .campaign-portrait {
+    max-width: 310px;
+  }
+  .portrait-placeholder,
+  .campaign-portrait > .media {
+    aspect-ratio: 1.6;
+  }
+  .timeline-scene {
+    padding-top: 22px;
+    padding-bottom: 65px;
+  }
+  .timeline-heading {
+    row-gap: 9px;
+  }
+  .semester {
+    font-size: 33px;
+  }
+  .documentary-copy h2 {
+    font-size: 35px;
+  }
+  .manifesto-scene {
+    padding-bottom: 70px;
+  }
+  .finale-scene {
+    padding-bottom: 65px;
+  }
+}

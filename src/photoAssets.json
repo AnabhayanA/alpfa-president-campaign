@@ -1,0 +1,173 @@
+{
+  "531FA750-0115-4524-A348-045A34D9C09E.jpg": {
+    "original": "531FA750-0115-4524-A348-045A34D9C09E.jpg",
+    "date": null,
+    "src": "/assets/networking/531fa750-0115-4524-a348-045a34d9c09e-large.webp",
+    "srcSet": "/assets/networking/531fa750-0115-4524-a348-045a34d9c09e-small.webp 640w, /assets/networking/531fa750-0115-4524-a348-045a34d9c09e-large.webp 1170w",
+    "width": 1170,
+    "height": 1560,
+    "bytes": 200772
+  },
+  "C71EFDE5-6AD0-463F-8972-9C6FE522B989.jpg": {
+    "original": "C71EFDE5-6AD0-463F-8972-9C6FE522B989.jpg",
+    "date": null,
+    "src": "/assets/soccer/c71efde5-6ad0-463f-8972-9c6fe522b989-large.webp",
+    "srcSet": "/assets/soccer/c71efde5-6ad0-463f-8972-9c6fe522b989-small.webp 640w, /assets/soccer/c71efde5-6ad0-463f-8972-9c6fe522b989-large.webp 645w",
+    "width": 645,
+    "height": 484,
+    "bytes": 61732
+  },
+  "D1A30706-2F2F-468E-AA04-307A0769CF11.jpg": {
+    "original": "D1A30706-2F2F-468E-AA04-307A0769CF11.jpg",
+    "date": null,
+    "src": "/assets/memes/d1a30706-2f2f-468e-aa04-307a0769cf11-large.webp",
+    "srcSet": "/assets/memes/d1a30706-2f2f-468e-aa04-307a0769cf11-small.webp 480w, /assets/memes/d1a30706-2f2f-468e-aa04-307a0769cf11-large.webp 480w",
+    "width": 480,
+    "height": 480,
+    "bytes": 6636
+  },
+  "E7B70951-5CCB-4FA0-ABB8-98A586A18E64.jpg": {
+    "original": "E7B70951-5CCB-4FA0-ABB8-98A586A18E64.jpg",
+    "date": null,
+    "src": "/assets/soccer/e7b70951-5ccb-4fa0-abb8-98a586a18e64-large.webp",
+    "srcSet": "/assets/soccer/e7b70951-5ccb-4fa0-abb8-98a586a18e64-small.webp 640w, /assets/soccer/e7b70951-5ccb-4fa0-abb8-98a586a18e64-large.webp 645w",
+    "width": 645,
+    "height": 484,
+    "bytes": 60184
+  },
+  "IMG_0323.JPG": {
+    "original": "IMG_0323.JPG",
+    "date": "2025-09-27T16:17:38.000Z",
+    "src": "/assets/networking/img_0323-large.webp",
+    "srcSet": "/assets/networking/img_0323-small.webp 640w, /assets/networking/img_0323-large.webp 1600w",
+    "width": 1600,
+    "height": 900,
+    "bytes": 311928
+  },
+  "IMG_0595.heic": {
+    "original": "IMG_0595.heic",
+    "date": "2025-10-25T20:24:21.000Z",
+    "src": "/assets/events/img_0595-large.webp",
+    "srcSet": "/assets/events/img_0595-small.webp 640w, /assets/events/img_0595-large.webp 1600w",
+    "width": 1600,
+    "height": 900,
+    "bytes": 174214
+  },
+  "IMG_2141.PNG": {
+    "original": "IMG_2141.PNG",
+    "date": null,
+    "src": "/assets/memes/img_2141-large.webp",
+    "srcSet": "/assets/memes/img_2141-small.webp 640w, /assets/memes/img_2141-large.webp 1290w",
+    "width": 1290,
+    "height": 1285,
+    "bytes": 31024
+  },
+  "IMG_2733.PNG": {
+    "original": "IMG_2733.PNG",
+    "date": null,
+    "src": "/assets/memes/img_2733-large.webp",
+    "srcSet": "/assets/memes/img_2733-small.webp 640w, /assets/memes/img_2733-large.webp 1057w",
+    "width": 1057,
+    "height": 679,
+    "bytes": 52324
+  },
+  "IMG_3392.PNG": {
+    "original": "IMG_3392.PNG",
+    "date": "2025-10-14T14:37:39.000Z",
+    "src": "/assets/events/img_3392-large.webp",
+    "srcSet": "/assets/events/img_3392-small.webp 640w, /assets/events/img_3392-large.webp 1290w",
+    "width": 1290,
+    "height": 1327,
+    "bytes": 287174
+  },
+  "IMG_4556.PNG": {
+    "original": "IMG_4556.PNG",
+    "date": "2026-03-05T14:58:12.000Z",
+    "src": "/assets/events/img_4556-large.webp",
+    "srcSet": "/assets/events/img_4556-small.webp 640w, /assets/events/img_4556-large.webp 1018w",
+    "width": 1018,
+    "height": 1800,
+    "bytes": 206952
+  },
+  "IMG_4561.PNG": {
+    "original": "IMG_4561.PNG",
+    "date": "2026-03-06T15:35:30.000Z",
+    "src": "/assets/events/img_4561-large.webp",
+    "srcSet": "/assets/events/img_4561-small.webp 640w, /assets/events/img_4561-large.webp 830w",
+    "width": 830,
+    "height": 1800,
+    "bytes": 163220
+  },
+  "IMG_4787.HEIC": {
+    "original": "IMG_4787.HEIC",
+    "date": "2026-03-27T00:33:57.000Z",
+    "src": "/assets/events/img_4787-large.webp",
+    "srcSet": "/assets/events/img_4787-small.webp 640w, /assets/events/img_4787-large.webp 1600w",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 183310
+  },
+  "IMG_5005.HEIC": {
+    "original": "IMG_5005.HEIC",
+    "date": "2026-04-25T21:35:19.000Z",
+    "src": "/assets/events/img_5005-large.webp",
+    "srcSet": "/assets/events/img_5005-small.webp 640w, /assets/events/img_5005-large.webp 1600w",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 233602
+  },
+  "IMG_5014.HEIC": {
+    "original": "IMG_5014.HEIC",
+    "date": "2026-04-25T23:08:24.000Z",
+    "src": "/assets/events/img_5014-large.webp",
+    "srcSet": "/assets/events/img_5014-small.webp 640w, /assets/events/img_5014-large.webp 1600w",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 221646
+  },
+  "IMG_5451.HEIC": {
+    "original": "IMG_5451.HEIC",
+    "date": "2026-07-01T00:41:39.000Z",
+    "src": "/assets/events/img_5451-large.webp",
+    "srcSet": "/assets/events/img_5451-small.webp 640w, /assets/events/img_5451-large.webp 1350w",
+    "width": 1350,
+    "height": 1800,
+    "bytes": 466974
+  },
+  "IMG_5808.HEIC": {
+    "original": "IMG_5808.HEIC",
+    "date": "2026-08-09T13:42:40.000Z",
+    "src": "/assets/events/img_5808-large.webp",
+    "srcSet": "/assets/events/img_5808-small.webp 640w, /assets/events/img_5808-large.webp 1350w",
+    "width": 1350,
+    "height": 1800,
+    "bytes": 101106
+  },
+  "IMG_0959.heic": {
+    "original": "IMG_0959.heic",
+    "date": "2026-10-06T17:58:37.000Z",
+    "src": "/assets/events/img_0959-large.webp",
+    "srcSet": "/assets/events/img_0959-small.webp 640w, /assets/events/img_0959-large.webp 1350w",
+    "width": 1350,
+    "height": 1800,
+    "bytes": 330426
+  },
+  "IMG_6545.HEIC": {
+    "original": "IMG_6545.HEIC",
+    "date": null,
+    "src": "/assets/committee/img_6545-large.webp",
+    "srcSet": "/assets/committee/img_6545-small.webp 640w, /assets/committee/img_6545-large.webp 1600w",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 298608
+  },
+  "ooo-shi-1790019333321.jpg": {
+    "original": "ooo-shi-1790019333321.jpg",
+    "date": null,
+    "src": "/assets/app/ooo-shi-1790019333321-large.webp",
+    "srcSet": "/assets/app/ooo-shi-1790019333321-small.webp 640w, /assets/app/ooo-shi-1790019333321-large.webp 640w",
+    "width": 640,
+    "height": 480,
+    "bytes": 15096
+  }
+}
